@@ -12,5 +12,9 @@ const tutorials = [
 ];
 
 const titleCased = () => {
+  tutorials.forEach(currentStr => {
+    let subStrArr = currentStr.split(' ').map(currentSubStr => currentSubStr[0].toUpperCase() + currentSubStr.substring(1));
+    tutorials[tutorials.indexOf(currentStr)]=subStrArr.join(' ');
+  })
   return tutorials
 }
